@@ -9,19 +9,18 @@ import java.util.Calendar;
 
 public class teste {
     public static void main(String[] args) {
-    	Calendar hoje = Calendar.getInstance();
+    Calendar hoje = Calendar.getInstance();
     	
-    	DateFormat df4 = DateFormat.getDateInstance(DateFormat.FULL);
+    DateFormat df4 = DateFormat.getDateInstance(DateFormat.FULL);
 		
-		Date data1= new Date();
+    Date data1= new Date();
 		
-		int hora = hoje.get(Calendar.HOUR_OF_DAY);
-		int minuto = hoje.get(Calendar.MINUTE);
+    int hora = hoje.get(Calendar.HOUR_OF_DAY);
+    int minuto = hoje.get(Calendar.MINUTE);
 
+    System.out.printf("Hoje é %s e agora são %d horas e %d minutos",df4.format(data1), hora,minuto);
 		
-		System.out.printf("Hoje é %s e agora são %d horas e %d minutos",df4.format(data1), hora,minuto);
-		
-}
+	}
 }
 
 -------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,61 @@
+Exercício 1
+
+package exercicios;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Calendar;
+
+
+public class teste {
+    public static void main(String[] args) {
+    	Calendar hoje = Calendar.getInstance();
+    	
+    	DateFormat df4 = DateFormat.getDateInstance(DateFormat.FULL);
+		
+		Date data1= new Date();
+		
+		int hora = hoje.get(Calendar.HOUR_OF_DAY);
+		int minuto = hoje.get(Calendar.MINUTE);
+
+		
+		System.out.printf("Hoje é %s e agora são %d horas e %d minutos",df4.format(data1), hora,minuto);
+		
+}
+}
+
+-------------------------------------------------------------------------------------------------------------
+Exercício 2
+
+package exercicios;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+
+public class teste {
+
+	public static void main(String[] args) {
+
+        contaTempo(7, 4, 2025);
+    }
+
+	public static void contaTempo(int dia, int mes, int ano) {
+  
+        LocalDateTime datahoje = LocalDateTime.now();
+        LocalDate datainserida = LocalDate.of(ano, mes, dia);
+        
+   
+        Period periodo = Period.between(datahoje.toLocalDate(), datainserida);
+     
+        System.out.println("Faltam " + periodo.getYears() + " ano(s), " + periodo.getMonths() + " mes(es) e " + periodo.getDays() + " dia(s) para essa data em "+ano);
+  
+    }
+}
+
+
+
+
+
+
+
